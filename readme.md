@@ -1,7 +1,7 @@
 # Демо проект по автоматизации тестирования для сайта компании [**Magnum**](https://magnum.kz/?city=astana)
 
 <p align="center">
-<img title="reqres.in" src="../qa_guru_java_lesson_17_mag/images/logo/magnum.png">
+<img title="magnum" src="images/logo/magnum.png">
 </p>
 
 ---
