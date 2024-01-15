@@ -15,9 +15,11 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://magnum.kz";
-        Configuration.browser =  System.getProperty("browser", "chrome");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.pageLoadStrategy = "eager";
+        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.timeout = 10000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -29,9 +31,9 @@ public class TestBase {
     }
 
     @AfterEach
-    void addAttachments(){
+    void addAttachments() {
         Attach.screenShotAs("Last screenshot");
-        if (!Configuration.browser.equalsIgnoreCase("firefox")){
+        if (!Configuration.browser.equalsIgnoreCase("firefox")) {
             Attach.browserConsoleLogs();
         }
         Attach.pageSource();

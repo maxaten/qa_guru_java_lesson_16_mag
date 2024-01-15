@@ -12,7 +12,7 @@ public class ResultSearchPage {
 
 
     @Step("Проверка отображения найденного продукта")
-    public void checkProduct(String value){
+    public void checkProduct(String value) {
         foundProducts.shouldHave(Condition.text(value));
     }
 }

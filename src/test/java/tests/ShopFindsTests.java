@@ -6,9 +6,8 @@ import org.junit.jupiter.api.Test;
 import pages.ShopsPage;
 
 
-
 @Tag("shops")
-public class ShopFindsTests extends TestBase{
+public class ShopFindsTests extends TestBase {
 
     ShopsPage shops = new ShopsPage();
 

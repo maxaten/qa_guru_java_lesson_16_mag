@@ -10,7 +10,7 @@ public class SurveyConfirmModal {
 
     public String confirmText = "Спасибо за пройденный опрос";
 
-    public void successfulConfirm(String value){
+    public void successfulConfirm(String value) {
         surveyConfirmModal.shouldHave(Condition.text(value));
     }
 }

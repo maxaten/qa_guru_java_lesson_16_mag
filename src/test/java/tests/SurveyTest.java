@@ -9,7 +9,7 @@ import pages.components.SurveyConfirmModal;
 
 
 @Tag("survey")
-public class SurveyTest extends TestBase{
+public class SurveyTest extends TestBase {
 
     SurveyPage survey = new SurveyPage();
     SurveyConfirmModal confirm = new SurveyConfirmModal();

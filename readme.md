@@ -91,7 +91,7 @@ ___
 
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project%20qa_guru_java_lesson_17_mag_maxaten/11/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project%20qa_guru_java_lesson_17_mag_maxaten/allure/)</a>
 
 ### *Основная страница отчёта*
 

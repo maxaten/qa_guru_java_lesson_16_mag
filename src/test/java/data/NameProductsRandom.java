@@ -10,7 +10,7 @@ public class NameProductsRandom {
 
 
     public String getRandomProduct() {
-        String[] products = {"молоко","вода","шоколад"};
+        String[] products = {"молоко", "вода", "шоколад"};
         return faker.options().option(products);
     }
 

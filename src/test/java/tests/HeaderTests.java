@@ -7,7 +7,6 @@ import pages.components.BurgerModal;
 import pages.components.HeaderComponent;
 
 
-
 @Tag("header")
 public class HeaderTests extends TestBase {
 
@@ -17,11 +16,10 @@ public class HeaderTests extends TestBase {
     BurgerModal burger = new BurgerModal();
 
 
-
     @Test
     @DisplayName("Поиск продукта")
     @Tag("smoke")
-    public void fillSearchFormTest(){
+    public void fillSearchFormTest() {
         header.openPage(header.mainPage).
                 productSearch(products.name);
 
@@ -32,7 +30,7 @@ public class HeaderTests extends TestBase {
     @Test
     @Tag("regress")
     @DisplayName("Переключение языка на казахский")
-    public void switchLanguageKzTest(){
+    public void switchLanguageKzTest() {
         header.openPage(header.mainPage)
                 .selectLanguage(header.langKZ);
 
