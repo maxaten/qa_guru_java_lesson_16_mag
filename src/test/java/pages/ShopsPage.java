@@ -40,7 +40,7 @@ public class ShopsPage {
     }
 
     @Step("Выбор магазина в списке")
-    public void choiceShop() {
+    public void selectShop() {
         shopList.$("div", 1).click();
     }
 

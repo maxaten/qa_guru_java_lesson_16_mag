@@ -51,7 +51,7 @@ public class SurveyPage {
     }
 
     @Step("Выбор магазина из списка")
-    public SurveyPage chooseStoreAddress() {
+    public SurveyPage selectStoreAddress() {
         storeInput.click();
         storeList.$("li", 2).click();
 

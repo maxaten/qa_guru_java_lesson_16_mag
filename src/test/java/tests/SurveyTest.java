@@ -22,7 +22,7 @@ public class SurveyTest extends TestBase {
     public void fillSurveyFormTest() {
         survey.openPage(survey.uri)
                 .setCity(survey.city)
-                .chooseStoreAddress()
+                .selectStoreAddress()
                 .setProduct(survey.product1, survey.product2)
                 .setOther(survey.other)
                 .sendAnswerForSurvey();

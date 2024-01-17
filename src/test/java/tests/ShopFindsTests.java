@@ -28,7 +28,7 @@ public class ShopFindsTests extends TestBase {
     public void descriptionShop() {
         shops.openPage(shops.uri)
                 .inputStore(shops.shopName)
-                .choiceShop();
+                .selectShop();
 
         shops.checkSummaryShop(shops.summary);
     }
