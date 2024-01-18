@@ -3,8 +3,9 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
+
+import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -18,8 +19,7 @@ public class OurBrandPage {
     SelenideElement title = $("div.brands"),
             kundeRef = $("[href='/brands/kunde?city=astana']"),
             kundeImage = $("[src='https://magnum.kz:1337/uploads/kunde_1_3e0f9cf74a.png']"),
-    ownBrandTitle = $("");
-
+            brandsInfo = $("div.brands__info div");
 
 
     @Step("Открытие страницы {value}")
@@ -44,13 +44,19 @@ public class OurBrandPage {
         return this;
     }
 
-    @Step("")
+    @Step("Проверка отобращения преимуществ")
     public void checkSummaryBrands() {
-//        $("div.brands__info").shouldHave(text("Собственная торговая марка"));
-        $$("div.brands__info div").first().shouldHave(text("Собственная торговая марка"));
-        $("div.brands__info div").$(byText("Собственная торговая марка")).shouldBe(visible);
-        $("div.brands__info div").$(byText("Это широкий ассортимент качественных товаров по выгодным ценам: продукты питания, бытовая химия, товары для дома, текстиль и многое другое. Всё это произведено с любовью и заботой к нашим покупателям по заказу Magnum.")).shouldBe(visible);
+        $$("div.brands__info div div").shouldHave(texts("Собственная торговая марка",
+                "Это широкий ассортимент качественных товаров по выгодным ценам: продукты питания, бытовая химия, товары для дома, текстиль и многое другое. Всё это произведено с любовью и заботой к нашим покупателям по заказу Magnum.",
+                "Это выгодно!",
+                "Мы обеспечиваем низкие цены на товары собственной марки благодаря прямому сотрудничеству с отечественными и иностранными производителями - без посредников и дополнительных расходов.",
+                "Это качественно!",
+                "Мы лично проводим аудит на производстве, оцениваем техническую документацию, проводим дегустации. Каждый продукт проходит обязательный контроль качества."));
     }
 
+    @Step("Выбор бренда")
+    public void selectBrand() {
+        kundeImage.click();
+    }
 
 }

@@ -16,14 +16,9 @@ public class HeaderComponent {
             catalog = $(".header-nav .catalog-stocks-link");
 
 
-    public String langKZ = "Қазақша",
-            catalogName = "Жеңілдіктер каталогы",
-            mainPage = "/?city=astana";
-
-
     @Step("Открытие страницы {value} ")
-    public HeaderComponent openPage(String value) {
-        open(value);
+    public HeaderComponent openPage() {
+        open("/?city=astana");
 
         return this;
     }

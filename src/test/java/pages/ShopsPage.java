@@ -14,17 +14,9 @@ public class ShopsPage {
             shopList = $("div.map-address__descr");
 
 
-    public String shopName = "Назарбаев",
-            summary = "Daily\n" +
-                    "Magnum - НАЗАРБАЕВ УНИВЕРСИТЕТ\n" +
-                    "г. Астана, Кабанбай Батыра 53\n" +
-                    "Режим работы:09:00 - 23:00",
-
-    uri = "/shops?city=astana";
-
     @Step("Открытие страницы {value}")
-    public ShopsPage openPage(String value) {
-        open(value);
+    public ShopsPage openPage() {
+        open("/shops?city=astana");
         return this;
     }
 

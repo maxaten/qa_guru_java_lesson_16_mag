@@ -1,5 +1,6 @@
 package tests;
 
+import data.TestData;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -13,20 +14,20 @@ public class SurveyTest extends TestBase {
 
     SurveyPage survey = new SurveyPage();
     SurveyConfirmModal confirm = new SurveyConfirmModal();
-
+    TestData testData = new TestData();
 
     @Test
     @Disabled("Задизейблено, чтобы не спамить письмами в БД")
     @Tag("smoke")
     @DisplayName("Отправка обратной связи по недостающему товару")
     public void fillSurveyFormTest() {
-        survey.openPage(survey.uri)
-                .setCity(survey.city)
+        survey.openPage()
+                .setCity(testData.city)
                 .selectStoreAddress()
-                .setProduct(survey.product1, survey.product2)
-                .setOther(survey.other)
+                .setProduct(testData.product1, testData.product2)
+                .setOther(testData.other)
                 .sendAnswerForSurvey();
 
-        confirm.successfulConfirm(confirm.confirmText);
+        confirm.successfulConfirm(testData.confirmText);
     }
 }

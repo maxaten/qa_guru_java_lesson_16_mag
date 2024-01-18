@@ -1,5 +1,6 @@
 package tests;
 
+import data.TestData;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,25 +12,27 @@ public class ShopFindsTests extends TestBase {
 
     ShopsPage shops = new ShopsPage();
 
+    TestData testData = new TestData();
+
 
     @Test
     @Tag("smoke")
     @DisplayName("Поиск магазина")
     public void searchStoreTest() {
-        shops.openPage(shops.uri)
-                .inputStore(shops.shopName);
+        shops.openPage()
+                .inputStore(testData.shopName);
 
-        shops.checkInputStoreName(shops.shopName);
+        shops.checkInputStoreName(testData.shopName);
     }
 
     @Test
     @Tag("smoke")
     @DisplayName("Проверка описания магазина")
     public void descriptionShop() {
-        shops.openPage(shops.uri)
-                .inputStore(shops.shopName)
+        shops.openPage()
+                .inputStore(testData.shopName)
                 .selectShop();
 
-        shops.checkSummaryShop(shops.summary);
+        shops.checkSummaryShop(testData.summary);
     }
 }

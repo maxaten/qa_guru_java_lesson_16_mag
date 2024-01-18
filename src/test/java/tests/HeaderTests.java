@@ -1,6 +1,6 @@
 package tests;
 
-import data.NameProductsRandom;
+import data.TestData;
 import org.junit.jupiter.api.*;
 import pages.ResultSearchPage;
 import pages.components.BurgerModal;
@@ -12,18 +12,18 @@ public class HeaderTests extends TestBase {
 
     HeaderComponent header = new HeaderComponent();
     ResultSearchPage resultSearchPage = new ResultSearchPage();
-    NameProductsRandom products = new NameProductsRandom();
     BurgerModal burger = new BurgerModal();
+    TestData testData = new TestData();
 
 
     @Test
     @DisplayName("Поиск продукта")
     @Tag("smoke")
     public void fillSearchFormTest() {
-        header.openPage(header.mainPage).
-                productSearch(products.name);
+        header.openPage().
+                productSearch(testData.productName);
 
-        resultSearchPage.checkProduct(products.name);
+        resultSearchPage.checkProduct(testData.productName);
 
     }
 
@@ -31,19 +31,19 @@ public class HeaderTests extends TestBase {
     @Tag("regress")
     @DisplayName("Переключение языка на казахский")
     public void switchLanguageKzTest() {
-        header.openPage(header.mainPage)
-                .selectLanguage(header.langKZ);
+        header.openPage()
+                .selectLanguage(testData.langKZ);
 
-        header.checkLanguageKZ(header.catalogName);
+        header.checkLanguageKZ(testData.catalogName);
     }
 
     @Test
     @Tag("regress")
     @DisplayName("Проверка отображения элементов меню")
     public void checkBurgerMenuTest() {
-        header.openPage(header.mainPage)
+        header.openPage()
                 .clickBurgerButton();
 
-        burger.getBurgerMenu(burger.menu);
+        burger.getBurgerMenu(testData.menu);
     }
 }
