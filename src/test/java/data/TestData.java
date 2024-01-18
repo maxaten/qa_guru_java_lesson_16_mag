@@ -26,11 +26,10 @@ public class TestData {
 
     //Данные для ShopFindsTest
     public String shopName = "Назарбаев",
-            summary = """
-                    Daily
-                    Magnum - НАЗАРБАЕВ УНИВЕРСИТЕТ
-                    г. Астана, Кабанбай Батыра 53
-                    Режим работы:09:00 - 23:00""";
+            summary = "Daily\n" +
+                    "Magnum - НАЗАРБАЕВ УНИВЕРСИТЕТ\n" +
+                    "г. Астана, Кабанбай Батыра 53\n" +
+                    "Режим работы:09:00 - 23:00";
 
 
     //Данные для HeaderComponent
