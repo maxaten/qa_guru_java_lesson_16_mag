@@ -14,7 +14,7 @@ public class ShopsPage {
             shopList = $("div.map-address__descr");
 
 
-    @Step("Открытие страницы {value}")
+    @Step("Открытие страницы")
     public ShopsPage openPage() {
         open("/shops?city=astana");
         return this;

@@ -16,7 +16,7 @@ public class HeaderComponent {
             catalog = $(".header-nav .catalog-stocks-link");
 
 
-    @Step("Открытие страницы {value} ")
+    @Step("Открытие страницы")
     public HeaderComponent openPage() {
         open("/?city=astana");
 

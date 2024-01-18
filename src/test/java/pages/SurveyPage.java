@@ -19,7 +19,7 @@ public class SurveyPage {
             submitButton = $("button.interview__btn");
 
 
-    @Step("Открытие страницы опроса по товару {value}")
+    @Step("Открытие страницы опроса по товару")
     public SurveyPage openPage() {
         open("/interview");
 

@@ -18,7 +18,7 @@ public class OurBrandPage {
             kundeImage = $("[src='https://magnum.kz:1337/uploads/kunde_1_3e0f9cf74a.png']");
 
 
-    @Step("Открытие страницы {value}")
+    @Step("Открытие страницы")
     public OurBrandPage openPage() {
         open("/brands?city=astana");
         return this;
