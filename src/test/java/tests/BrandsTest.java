@@ -13,7 +13,7 @@ public class BrandsTest extends TestBase {
     @Test
     @Owner("")
     public void checkBrandsImageAndRef() {
-        brandPage.openPage(brandPage.uri)
+        brandPage.openPage()
                 .checkTitle(brandPage.titleName)
                 .checkKundeBrand()
                 .checkSummaryBrands();
@@ -22,7 +22,7 @@ public class BrandsTest extends TestBase {
 
     @Test
     public void checkRefClick() {
-        brandPage.openPage(brandPage.uri)
+        brandPage.openPage()
                 .selectBrand();
         kundePage.checkKundetitle();
     }
