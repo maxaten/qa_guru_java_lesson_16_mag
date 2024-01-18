@@ -13,18 +13,14 @@ public class OurBrandPage {
     public String titleName = "Наши бренды";
 
 
-    public String uri = "/brands?city=astana";
-
-
     SelenideElement title = $("div.brands"),
             kundeRef = $("[href='/brands/kunde?city=astana']"),
-            kundeImage = $("[src='https://magnum.kz:1337/uploads/kunde_1_3e0f9cf74a.png']"),
-            brandsInfo = $("div.brands__info div");
+            kundeImage = $("[src='https://magnum.kz:1337/uploads/kunde_1_3e0f9cf74a.png']");
 
 
     @Step("Открытие страницы {value}")
-    public OurBrandPage openPage(String value) {
-        open(value);
+    public OurBrandPage openPage() {
+        open("/brands?city=astana");
         return this;
     }
 
