@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BurgerModal {
 
-    SelenideElement burgerModal = $(".header-menu .header-menu__content");
+    private SelenideElement burgerModal = $(".header-menu .header-menu__content");
 
 
     @Step("Отображаются элементы меню")

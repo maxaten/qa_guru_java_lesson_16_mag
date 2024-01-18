@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class ShopsPage {
-    SelenideElement storesSearchInput = $("input.map-card__search-input"),
+    private SelenideElement storesSearchInput = $("input.map-card__search-input"),
             firstStoreOnTheList = $(".map-card .map-address"),
             textSummary = $("div.address-card__descr"),
             shopList = $("div.map-address__descr");

@@ -13,7 +13,7 @@ public class OurBrandPage {
     public String titleName = "Наши бренды";
 
 
-    SelenideElement title = $("div.brands"),
+    private SelenideElement title = $("div.brands"),
             kundeRef = $("[href='/brands/kunde?city=astana']"),
             kundeImage = $("[src='https://magnum.kz:1337/uploads/kunde_1_3e0f9cf74a.png']");
 

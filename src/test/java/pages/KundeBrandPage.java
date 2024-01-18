@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class KundeBrandPage {
 
-    SelenideElement kundeTitle = $("h3.full-brand__title");
+    private SelenideElement kundeTitle = $("h3.full-brand__title");
 
 
     public void checkKundetitle() {

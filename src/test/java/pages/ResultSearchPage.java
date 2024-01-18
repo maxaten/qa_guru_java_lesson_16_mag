@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ResultSearchPage {
 
-    SelenideElement foundProducts = $(".default-wrapper .search");
+    private SelenideElement foundProducts = $(".default-wrapper .search");
 
 
     @Step("Проверка отображения найденного продукта")

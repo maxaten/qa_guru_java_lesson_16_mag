@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class SurveyPage {
 
 
-    SelenideElement cityField = $(".interview__form .interview__select-value"),
+    private SelenideElement cityField = $(".interview__form .interview__select-value"),
             cityList = $(".interview .interview__select-list"),
             storeInput = $("[placeholder='Выберите магазин или введите его адрес']"),
             storeList = $(".active.interview__select-dropdown"),

@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class HeaderComponent {
-    SelenideElement burgerButton = $(".burger .burger-top"),
+    private SelenideElement burgerButton = $(".burger .burger-top"),
             inputSearch = $(".header [type='text']"),
             language = $(".header .header-top__language"),
             dropLanguageMenu = $(".header .header-top__language"),
