@@ -1,6 +1,10 @@
 package tests;
 
 import data.TestData;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Issue;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,6 +22,10 @@ public class ShopFindsTests extends TestBase {
     @Test
     @Tag("smoke")
     @DisplayName("Поиск магазина")
+    @Issue("HOMEWORK-944")
+    @Owner("Maksim A")
+    @Epic("Магазины")
+    @Story("Поиск. Все что связано с поиском")
     public void searchStoreTest() {
         shops.openPage()
                 .inputStore(testData.shopName);
@@ -28,6 +36,10 @@ public class ShopFindsTests extends TestBase {
     @Test
     @Tag("smoke")
     @DisplayName("Проверка описания магазина")
+    @Issue("HOMEWORK-944")
+    @Owner("Maksim A")
+    @Epic("Магазины")
+    @Story("Поиск. Все что связано с поиском")
     public void descriptionShop() {
         shops.openPage()
                 .inputStore(testData.shopName)
