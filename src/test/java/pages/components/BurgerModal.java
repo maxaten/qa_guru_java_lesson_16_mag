@@ -8,24 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BurgerModal {
 
-    SelenideElement burgerModal = $(".header-menu .header-menu__content");
-
-    public String[] menu = {
-            "Акции",
-            "Каталог скидок",
-            "Программа лояльности",
-            "Готовим с Magnum",
-            "Заказ с доставкой",
-            "Магазины",
-            "Magnum Corp.",
-            "Контакты",
-            "О компании",
-            "Работа в Magnum",
-            "Наши бренды",
-            "Magnum News",
-            "Служба Комплаенс",
-            "Опрос по ассортименту"
-    };
+    private SelenideElement burgerModal = $(".header-menu .header-menu__content");
 
 
     @Step("Отображаются элементы меню")

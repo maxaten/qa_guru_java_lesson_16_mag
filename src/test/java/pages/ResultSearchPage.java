@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ResultSearchPage {
 
-    SelenideElement foundProducts = $(".default-wrapper .search");
+    private SelenideElement foundProducts = $(".default-wrapper .search");
 
 
     @Step("Проверка отображения найденного продукта")
-    public void checkProduct(String value){
+    public void checkProduct(String value) {
         foundProducts.shouldHave(Condition.text(value));
     }
 }
