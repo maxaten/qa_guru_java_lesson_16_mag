@@ -29,6 +29,7 @@ public class TestBase {
         Configuration.browserSize = webConfig.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
+        Configuration.remote = webConfig.getRemoteUrl();
         if (env.equals("remote")) {
             Configuration.remote = webConfig.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -40,11 +41,6 @@ public class TestBase {
         }
     }
 
-
-    @AfterEach
-    void closeWebDriver() {
-        Selenide.closeWebDriver();
-    }
 
     @AfterEach
     void addAttachments() {
