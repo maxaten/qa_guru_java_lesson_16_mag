@@ -14,6 +14,8 @@ import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 
 public class TestBase {
 
+    public static String env = System.getProperty("env", "local");
+
     @BeforeAll
     static void beforeAll() {
         WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
@@ -22,16 +24,16 @@ public class TestBase {
         Configuration.browserVersion = webConfig.getBrowserVersion();
         Configuration.browserSize = webConfig.getBrowserSize();
         Configuration.pageLoadStrategy = "eager";
-//        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.timeout = 10000;
-
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
+        if (env.equals("remote")) {
+            Configuration.remote = webConfig.getRemoteUrl();
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
+        }
     }
 
     @AfterEach
