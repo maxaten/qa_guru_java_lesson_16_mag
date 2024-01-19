@@ -52,6 +52,15 @@
 <a href="https://core.telegram.org/bots/api/"><img src="images/logo/telegram_logo.svg" width="50" height="50"  alt="Jira"/></a> 
 </p>
 
+* Проект написан в среде разработки программного обеспечения <code>Intelij_IDEA</code>.
+* В проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования <code>Selenide</code>.
+* Использованы фреймворк <code>JUnit 5</code>.
+* В качестве сборщика был использован - <code>Gradle</code>.
+* При прогоне тестов удаленно, браузер запускается в <code>Selenoid</code>, который записывает видео.
+* Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием отчета в <code>Allure</code> и отправкой результатов в <code>Telegram</code> c помощью бота.
+* Осуществлена интеграция с <code>Allure TestOps</code> с <code>Jenkins</code>, при которой возможен запуск тестов из <code>Allure TestOps</code>.
+* Осуществлена интеграция <code>Jira</code> с <code>Allure TestOps</code>, где рерультат прогона авто-тестов подтягивается в задачу в <code>Jira</code>
+
 ___
 <a id="cases"></a>
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
@@ -65,7 +74,7 @@ ___
 ___
 
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Project%20qa_guru_java_lesson_17_mag_maxaten/)</a>
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru_java_lesson_17_mag_maxaten/)</a>
 
 
 <p align="center">  
@@ -86,12 +95,16 @@ ___
 ___
 ***Локальный запуск:***
 ```bash  
-./gradlew clean test allureServe
+gradle clean test allureServe
 ```
 
+***Удаленный запуск***
+```bash
+gradle test -Denv="remote"
+```
 ___
 <a id="allure"></a>
-## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/Project%20qa_guru_java_lesson_17_mag_maxaten/allure/)</a>
+## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Отчет в  [Allure](https://jenkins.autotests.cloud/job/qa_guru_java_lesson_17_mag_maxaten/allure/)</a>
 
 ### *Основная страница отчёта*
 
