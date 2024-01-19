@@ -35,6 +35,7 @@
 ---
 
 <a id="tools"></a>
+
 ## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
 
 <p align="center">  
@@ -53,35 +54,44 @@
 </p>
 
 * Проект написан в среде разработки программного обеспечения <code>Intelij_IDEA</code>.
-* В проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования <code>Selenide</code>.
+* В проекте автотесты написаны на языке <code>Java</code> с использованием фреймворка для тестирования <code>
+  Selenide</code>.
 * Использованы фреймворк <code>JUnit 5</code>.
 * В качестве сборщика был использован - <code>Gradle</code>.
 * При прогоне тестов удаленно, браузер запускается в <code>Selenoid</code>, который записывает видео.
-* Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием отчета в <code>Allure</code> и отправкой результатов в <code>Telegram</code> c помощью бота.
-* Осуществлена интеграция с <code>Allure TestOps</code> с <code>Jenkins</code>, при которой возможен запуск тестов из <code>Allure TestOps</code>.
-* Осуществлена интеграция <code>Jira</code> с <code>Allure TestOps</code>, где рерультат прогона авто-тестов подтягивается в задачу в <code>Jira</code>
+* Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием отчета в <code>Allure</code> и
+  отправкой результатов в <code>Telegram</code> c помощью бота.
+* Осуществлена интеграция с <code>Allure TestOps</code> с <code>Jenkins</code>, при которой возможен запуск тестов
+  из <code>Allure TestOps</code>.
+* Осуществлена интеграция <code>Jira</code> с <code>Allure TestOps</code>, где рерультат прогона авто-тестов
+  подтягивается в задачу в <code>Jira</code>
 
 ___
 <a id="cases"></a>
+
 ## <a name="Примеры автоматизированных тест-кейсов">**Примеры автоматизированных тест-кейсов:**</a>
 
--  *Проверка отображения элементов меню*
--  *Поиск продукта*
--  *Переключение языка на казахский*
--  *Поиск магазина'*
--  *Проверка описания магазина*
--  *Отправка обратной связи по недостающему товару*
+- *Проверка отображения элементов меню*
+- *Поиск продукта*
+- *Переключение языка на казахский*
+- *Поиск магазина'*
+- *Проверка описания магазина*
+- *Отправка обратной связи по недостающему товару*
+- *Проверка отображения бренда на общей странице*
+- *Переход на страницу бренда*
+
 ___
 
 <a id="jenkins"></a>
-## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru_java_lesson_17_mag_maxaten/)</a>
 
+## <img alt="Jenkins" height="25" src="images/logo/Jenkins.svg" width="25"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/qa_guru_java_lesson_17_mag_maxaten/)</a>
 
 <p align="center">  
 <a href="https://jenkins.autotests.cloud/job/Project%20qa_guru_java_lesson_17_mag_maxaten/"><img src="images/screen/jenk_build.png" alt="Jenkins" width="1920"/></a>  
 </p>
 
 ### **Параметры сборки в Jenkins:**
+
 <a href="https://jenkins.autotests.cloud/job/Project%20qa_guru_java_lesson_17_mag_maxaten/build?delay=0sec"><img src="images/screen/jenk_params.png" alt="Jenkins" width="1920"/></a>
 
 - *task (all_tests, все тесты)*
@@ -91,19 +101,25 @@ ___
 
 ___
 <a id="console"></a>
+
 ## Команды для запуска из терминала
+
 ___
 ***Локальный запуск:***
+
 ```bash  
 gradle clean test allureServe
 ```
 
 ***Удаленный запуск***
+
 ```bash
 gradle test -Denv="remote"
 ```
+
 ___
 <a id="allure"></a>
+
 ## <img alt="Allure" height="25" src="images/logo/Allure.svg" width="25"/></a> <a name="Allure"></a>Отчет в  [Allure](https://jenkins.autotests.cloud/job/qa_guru_java_lesson_17_mag_maxaten/allure/)</a>
 
 ### *Основная страница отчёта*
@@ -128,6 +144,7 @@ ___
 
 ___
 <a id="allure-testops"></a>
+
 ## <img alt="Allure" height="25" src="images/logo/Allure2.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3771/dashboards">Allure TestOps</a>
 
 ### *Allure TestOps Dashboard*
@@ -150,8 +167,8 @@ ___
 
 ___
 <a id="jira"></a>
-## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-944">Jira</a>
 
+## <img alt="Allure" height="25" src="images/logo/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-944">Jira</a>
 
 <p align="center">  
 <img title="Jira" src="images/screen/jira.png" width="1920">  
@@ -159,6 +176,7 @@ ___
 
 ___
 <a id="telegram"></a>
+
 ## <img alt="Allure" height="25" src="images/logo/telegram_logo.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 
 <p align="center">  
@@ -167,6 +185,7 @@ ___
 
 ____
 <a id="video"></a>
+
 ## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
 
 <p align="center">
